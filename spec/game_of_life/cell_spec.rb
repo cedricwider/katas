@@ -1,18 +1,18 @@
 require 'rspec'
-require_relative '../src/cell.rb'
+require_relative '../src/ib/game_of_life/src/cell.rb'
 
 describe Cell do
-  
+
   it 'is initialized by two dimensional coordinates' do
     cell = Cell.new(x: 0, y: 0)
     expect(cell).not_to eq(nil)
   end
-  
+
   it 'is initially alive' do
     cell=Cell.new(x:0, y:0)
     expect(cell.alive?).to be true
   end
-  
+
   it 'can die' do
     cell=Cell.new(x:0, y:0)
     cell.alive=false

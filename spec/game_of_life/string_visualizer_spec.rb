@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/string_visualizer'
+require_relative '../src/ib/game_of_life/src/string_visualizer'
 require_relative '../src/grid'
 
 describe StringVisualizer do

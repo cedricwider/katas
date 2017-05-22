@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/life_engine'
+require_relative '../src/ib/game_of_life/src/life_engine'
 require_relative '../src/grid'
 require_relative '../src/cell'
 

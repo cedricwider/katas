@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../src/mars_rover.rb'
+require_relative '../src/ib/rovertechchallenge/src/mars_rover.rb'
 
 describe MarsRover::Rover do
 
@@ -10,11 +10,11 @@ describe MarsRover::Rover do
   it 'knows its position' do
     expect(rover.position.to_s).to eq '0,0,N'
   end
-	
+
 	it 'can be placed at a specific location' do
 		pos = MarsRover::Position.new(1,2,'S')
 		rvr = MarsRover::Rover.new 5,5,pos
-		
+
 		expect(rvr.position).to eq pos
   end
 

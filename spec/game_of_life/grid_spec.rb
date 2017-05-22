@@ -1,13 +1,13 @@
 require 'rspec'
-require_relative '../src/grid.rb'
+require_relative '../src/ib/game_of_life/src/grid.rb'
 require_relative '../src/cell.rb'
 
 describe Grid do
-  
+
   let :grid do
     Grid.new(height: 10, width: 10)
   end
-  
+
   it 'can be initialized with height and width' do
     # initialization is done using 'let' for simplicity.
     # what remains is the null check here to make sure
@@ -18,19 +18,19 @@ describe Grid do
   it 'initializes with all cells dead' do
     expect(grid.cell_at(x: 1, y: 2).alive?).to be false
   end
-  
+
   it 'can get a cell added' do
     cell = Cell.new x:0, y:0
     grid.add cell:cell
   end
-  
+
   it 'can return a cell by its position' do
     cell = Cell.new x:0, y:0
     grid.add cell:cell
-    
+
     expect(grid.cell_at(x: 0, y:0)).to eq(cell)
   end
-  
+
   it 'knows neighbouring cells of a cell' do
     center_cell = Cell.new(x:1, y:1)
     top_cell = Cell.new(x:0, y:1)
